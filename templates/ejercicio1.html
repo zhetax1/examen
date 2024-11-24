@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Compra de Pinturas</h1>
+    <form method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required><br>
+        <label>Edad:</label>
+        <input type="number" name="edad" required><br>
+        <label>Tarros de Pintura:</label>
+        <input type="number" name="tarros" required><br>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if total_sin_descuento is not none %}
+    <p>Nombre: {{ nombre }}</p>
+    <p>Total sin descuento: ${{ total_sin_descuento }}</p>
+    <p>Total con descuento: ${{ total_con_descuento }}</p>
+    {% endif %}
+</body>
+</html>
